@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)http://localhost:24267/session/rCharts2478159c1b6a/index.html -->
+<!-- test -->
+<html>
+<head class="datamaps-style-block">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="utf-8">
+	
+
+  <title>US enrollment age</title>  
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+		
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+	  <!-- = image_tag "usana_logo.gif"   -->
+		USANA 
+	  </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+	  <button type="button" class="btn btn-default navbar-right">Sign Off</button>
+	  
+     <!--  <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul> -->
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>  
+  
+  <div >
+	<Center><h3 style="font-family:verdana;">US Enrollment Application Age by State</h3></Center>
+  </div>  
+    
+    <!-- <script src="/assets/javascripts/d3.v3.min.js" type="text/javascript"></script><style type="text/css"></style>
+    <script src="/assets/javascripts/topojson.v1.min.js" type="text/javascript"></script>
+    <script src="/assets/javascripts/datamaps.all.min.js" type="text/javascript"></script> -->
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 800px;
+      height: 400px;
+    }  
+    </style>
+    
+  <style>.datamap path {stroke: #FFFFFF; stroke-width: 1px;} .datamaps-legend dt, .datamaps-legend dd { float: left; margin: 0 3px 0 0;} .datamaps-legend dd {width: 20px; margin-right: 6px; border-radius: 3px;} .datamaps-legend {padding-bottom: 20px; z-index: 1001; position: absolute; left: 4px; font-size: 12px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;} .datamaps-hoverover {display: none; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; } .hoverinfo {padding: 4px; border-radius: 1px; background-color: #FFF; box-shadow: 1px 1px 5px #CCC; font-size: 12px; border: 1px solid #CCC; } .hoverinfo hr {border:1px dotted #CCC; }</style></head>
+  <body>
+    
+    <div id="chart24781f4b640a" class="rChart datamaps">
+
+    <script id="popup-template" type="text/x-handlebars-template">
+    
+</script>
+<script>
+
+<!-- ------------------------------------ -->
+
+
+  var chartParams = {
+ "dom": "chart24781f4b640a",
+"width":    1000,
+"height":    500,
+"scope": "usa",
+geographyConfig: {
+	popupTemplate: function(geography, data) {
+      return '<div class="hoverinfo">' + geography.properties.name + '<br><b>'+data.APPLICANT_AGE+'</br></b>'},
+    highlightBorderColor: '#FFFF00',
+	highlightBorderWidth: 6},
+"fills": {
+ "(24,36.1]": "#EFF3FF",
+"(36.1,37.9]": "#BDD7E7",
+"(37.9,40.2]": "#6BAED6",
+"(40.2,42.6]": "#3182BD",
+"(42.6,51.2]": "#08519C" 
+},
+"legend": true,
+"labels": true,
+data: {
+ "-": {
+ "STATE": [ "-" ],
+"APPLICANT_AGE": [     37 ],
+"SPONSOR_AGE": [ 38.571 ],
+"fillKey": [ "(37.9,40.2]" ] 
+},
+"AE": {
+ "STATE": [ "AE" ],
+"APPLICANT_AGE": [   36.5 ],
+"SPONSOR_AGE": [  42.25 ],
+"fillKey": [ "(40.2,42.6]" ] 
+},
+"AK": {
+ "STATE": [ "AK" ],
+"APPLICANT_AGE": [  48.85 ],
+"SPONSOR_AGE": [  36.95 ],
+"fillKey": [ "(36.1,37.9]" ] 
+},
+"AL": {
+ "STATE": [ "AL" ],
+"APPLICANT_AGE": [ 40.358 ],
+"SPONSOR_AGE": [ 40.672 ],
+"fillKey": [ "(40.2,42.6]" ] 
+},
+"AP": {
+ "STATE": [ "AP" ],
+"APPLICANT_AGE": [ 33.231 ],
+"SPONSOR_AGE": [ 34.769 ],
+"fillKey": [ "(24,36.1]" ] 
+},
+"AR": {
+ "STATE": [ "AR" ],
+"APPLICANT_AGE": [ 27.208 ],
+"SPONSOR_AGE": [ 35.453 ],
+"fillKey": [ "(24,36.1]" ] 
+},
+"AZ": {
+ "STATE": [ "AZ" ],
+"APPLICANT_AGE": [ 40.457 ],
+"SPONSOR_AGE": [ 37.702 ],
+"fillKey": [ "(36.1,37.9]" ] 
+},
+"CA": {
+ "STATE": [ "CA" ],
+"APPLICANT_AGE": [  38.61 ],
+"SPONSOR_AGE": [ 37.675 ],
+"fillKey": [ "(36.1,37.9]" ] 
+},
+"CO": {
+ "STATE": [ "CO" ],
+"APPLICANT_AGE": [ 43.586 ],
+"SPONSOR_AGE": [ 43.286 ],
+"fillKey": [ "(42.6,51.2]" ] 
+},
+"CT": {
+ "STATE": [ "CT" ],
+"APPLICANT_AGE": [ 43.333 ],
+"SPONSOR_AGE": [ 37.778 ],
+"fillKey": [ "(36.1,37.9]" ] 
+},
+"DC": {
+ "STATE": [ "DC" ],
+"APPLICANT_AGE": [ 26.125 ],
+"SPONSOR_AGE": [     37 ],
+"fillKey": [ "(36.1,37.9]" ] 
+},
+"DE": {
+ "STATE": [ "DE" ],
+"APPLICANT_AGE": [ 43.875 ],
+"SPONSOR_AGE": [ 38.575 ],
+"fillKey": [ "(37.9,40.2]" ] 
+},
+"FL": {
+ "STATE": [ "FL" ],
+"APPLICANT_AGE": [ 42.666 ],
+"SPONSOR_AGE": [ 42.123 ],
+"fillKey": [ "(40.2,42.6]" ] 
+},
+"GA": {
+ "STATE": [ "GA" ],
+"APPLICANT_AGE": [ 41.355 ],
+"SPONSOR_AGE": [ 40.198 ],
+"fillKey": [ "(37.9,40.2]" ] 
+},
+"GU": {
+ "STATE": [ "GU" ],
+"APPLICANT_AGE": [ 42.167 ],
+"SPONSOR_AGE": [ 37.167 ],
+"fillKey": [ "(36.1,37.9]" ] 
+},
+"HI": {
+ "STATE": [ "HI" ],
+"APPLICANT_AGE": [ 39.263 ],
+"SPONSOR_AGE": [ 36.026 ],
+"fillKey": [ "(24,36.1]" ] 
+},
+"IA": {
+ "STATE": [ "IA" ],
+"APPLICANT_AGE": [  44.13 ],
+"SPONSOR_AGE": [ 35.652 ],
+"fillKey": [ "(24,36.1]" ] 
+},
+"ID": {
+ "STATE": [ "ID" ],
+"APPLICANT_AGE": [ 45.658 ],
+"SPONSOR_AGE": [ 43.579 ],
+"fillKey": [ "(42.6,51.2]" ] 
+},
+"IL": {
+ "STATE": [ "IL" ],
+"APPLICANT_AGE": [ 40.992 ],
+"SPONSOR_AGE": [ 38.494 ],
+"fillKey": [ "(37.9,40.2]" ] 
+},
+"IN": {
+ "STATE": [ "IN" ],
+"APPLICANT_AGE": [  38.23 ],
+"SPONSOR_AGE": [ 37.492 ],
+"fillKey": [ "(36.1,37.9]" ] 
+},
+"KS": {
+ "STATE": [ "KS" ],
+"APPLICANT_AGE": [ 36.027 ],
+"SPONSOR_AGE": [  33.84 ],
+"fillKey": [ "(24,36.1]" ] 
+},
+"KY": {
+ "STATE": [ "KY" ],
+"APPLICANT_AGE": [ 34.875 ],
+"SPONSOR_AGE": [  34.75 ],
+"fillKey": [ "(24,36.1]" ] 
+},
+"LA": {
+ "STATE": [ "LA" ],
+"APPLICANT_AGE": [ 41.167 ],
+"SPONSOR_AGE": [ 36.278 ],
+"fillKey": [ "(36.1,37.9]" ] 
+},
+"MA": {
+ "STATE": [ "MA" ],
+"APPLICANT_AGE": [ 38.822 ],
+"SPONSOR_AGE": [ 38.067 ],
+"fillKey": [ "(37.9,40.2]" ] 
+},
+"MD": {
+ "STATE": [ "MD" ],
+"APPLICANT_AGE": [ 42.491 ],
+"SPONSOR_AGE": [ 43.284 ],
+"fillKey": [ "(42.6,51.2]" ] 
+},
+"ME": {
+ "STATE": [ "ME" ],
+"APPLICANT_AGE": [     36 ],
+"SPONSOR_AGE": [   40.2 ],
+"fillKey": [ "(40.2,42.6]" ] 
+},
+"MI": {
+ "STATE": [ "MI" ],
+"APPLICANT_AGE": [   42.5 ],
+"SPONSOR_AGE": [ 41.061 ],
+"fillKey": [ "(40.2,42.6]" ] 
+},
+"MN": {
+ "STATE": [ "MN" ],
+"APPLICANT_AGE": [ 42.495 ],
+"SPONSOR_AGE": [ 41.019 ],
+"fillKey": [ "(40.2,42.6]" ] 
+},
+"MO": {
+ "STATE": [ "MO" ],
+"APPLICANT_AGE": [ 43.213 ],
+"SPONSOR_AGE": [     44 ],
+"fillKey": [ "(42.6,51.2]" ] 
+},
+"MP": {
+ "STATE": [ "MP" ],
+"APPLICANT_AGE": [ 37.884 ],
+"SPONSOR_AGE": [ 39.558 ],
+"fillKey": [ "(37.9,40.2]" ] 
+},
+"MS": {
+ "STATE": [ "MS" ],
+"APPLICANT_AGE": [ 36.125 ],
+"SPONSOR_AGE": [ 33.375 ],
+"fillKey": [ "(24,36.1]" ] 
+},
+"MT": {
+ "STATE": [ "MT" ],
+"APPLICANT_AGE": [ 40.404 ],
+"SPONSOR_AGE": [   39.5 ],
+"fillKey": [ "(37.9,40.2]" ] 
+},
+"NC": {
+ "STATE": [ "NC" ],
+"APPLICANT_AGE": [ 41.696 ],
+"SPONSOR_AGE": [ 40.268 ],
+"fillKey": [ "(40.2,42.6]" ] 
+},
+"ND": {
+ "STATE": [ "ND" ],
+"APPLICANT_AGE": [ 39.429 ],
+"SPONSOR_AGE": [   42.5 ],
+"fillKey": [ "(40.2,42.6]" ] 
+},
+"NE": {
+ "STATE": [ "NE" ],
+"APPLICANT_AGE": [   38.5 ],
+"SPONSOR_AGE": [ 35.435 ],
+"fillKey": [ "(24,36.1]" ] 
+},
+"NH": {
+ "STATE": [ "NH" ],
+"APPLICANT_AGE": [ 50.364 ],
+"SPONSOR_AGE": [ 42.273 ],
+"fillKey": [ "(40.2,42.6]" ] 
+},
+"NJ": {
+ "STATE": [ "NJ" ],
+"APPLICANT_AGE": [ 43.904 ],
+"SPONSOR_AGE": [ 39.846 ],
+"fillKey": [ "(37.9,40.2]" ] 
+},
+"NM": {
+ "STATE": [ "NM" ],
+"APPLICANT_AGE": [ 45.706 ],
+"SPONSOR_AGE": [ 42.644 ],
+"fillKey": [ "(42.6,51.2]" ] 
+},
+"NV": {
+ "STATE": [ "NV" ],
+"APPLICANT_AGE": [  39.66 ],
+"SPONSOR_AGE": [ 39.074 ],
+"fillKey": [ "(37.9,40.2]" ] 
+},
+"NY": {
+ "STATE": [ "NY" ],
+"APPLICANT_AGE": [   38.5 ],
+"SPONSOR_AGE": [ 40.024 ],
+"fillKey": [ "(37.9,40.2]" ] 
+},
+"OH": {
+ "STATE": [ "OH" ],
+"APPLICANT_AGE": [ 46.216 ],
+"SPONSOR_AGE": [ 46.611 ],
+"fillKey": [ "(42.6,51.2]" ] 
+},
+"OK": {
+ "STATE": [ "OK" ],
+"APPLICANT_AGE": [ 37.032 ],
+"SPONSOR_AGE": [ 36.226 ],
+"fillKey": [ "(36.1,37.9]" ] 
+},
+"OR": {
+ "STATE": [ "OR" ],
+"APPLICANT_AGE": [ 37.662 ],
+"SPONSOR_AGE": [ 40.546 ],
+"fillKey": [ "(40.2,42.6]" ] 
+},
+"PA": {
+ "STATE": [ "PA" ],
+"APPLICANT_AGE": [ 40.391 ],
+"SPONSOR_AGE": [ 44.116 ],
+"fillKey": [ "(42.6,51.2]" ] 
+},
+"PR": {
+ "STATE": [ "PR" ],
+"APPLICANT_AGE": [     66 ],
+"SPONSOR_AGE": [ 42.667 ],
+"fillKey": [ "(42.6,51.2]" ] 
+},
+"RI": {
+ "STATE": [ "RI" ],
+"APPLICANT_AGE": [   35.2 ],
+"SPONSOR_AGE": [   37.6 ],
+"fillKey": [ "(36.1,37.9]" ] 
+},
+"SC": {
+ "STATE": [ "SC" ],
+"APPLICANT_AGE": [     46 ],
+"SPONSOR_AGE": [ 42.861 ],
+"fillKey": [ "(42.6,51.2]" ] 
+},
+"SD": {
+ "STATE": [ "SD" ],
+"APPLICANT_AGE": [ 36.579 ],
+"SPONSOR_AGE": [ 33.579 ],
+"fillKey": [ "(24,36.1]" ] 
+},
+"TN": {
+ "STATE": [ "TN" ],
+"APPLICANT_AGE": [ 42.009 ],
+"SPONSOR_AGE": [ 43.963 ],
+"fillKey": [ "(42.6,51.2]" ] 
+},
+"TX": {
+ "STATE": [ "TX" ],
+"APPLICANT_AGE": [ 40.634 ],
+"SPONSOR_AGE": [ 39.256 ],
+"fillKey": [ "(37.9,40.2]" ] 
+},
+"USA": {
+ "STATE": [ "USA" ],
+"APPLICANT_AGE": [     21 ],
+"SPONSOR_AGE": [     24 ],
+"fillKey": [ null ] 
+},
+"UT": {
+ "STATE": [ "UT" ],
+"APPLICANT_AGE": [ 39.647 ],
+"SPONSOR_AGE": [ 37.888 ],
+"fillKey": [ "(37.9,40.2]" ] 
+},
+"VA": {
+ "STATE": [ "VA" ],
+"APPLICANT_AGE": [ 40.901 ],
+"SPONSOR_AGE": [ 41.061 ],
+"fillKey": [ "(40.2,42.6]" ] 
+},
+"VT": {
+ "STATE": [ "VT" ],
+"APPLICANT_AGE": [ 43.364 ],
+"SPONSOR_AGE": [ 51.182 ],
+"fillKey": [ "(42.6,51.2]" ] 
+},
+"WA": {
+ "STATE": [ "WA" ],
+"APPLICANT_AGE": [ 43.389 ],
+"SPONSOR_AGE": [ 43.717 ],
+"fillKey": [ "(42.6,51.2]" ] 
+},
+"WI": {
+ "STATE": [ "WI" ],
+"APPLICANT_AGE": [ 40.589 ],
+"SPONSOR_AGE": [ 36.093 ],
+"fillKey": [ "(24,36.1]" ] 
+},
+"WV": {
+ "STATE": [ "WV" ],
+"APPLICANT_AGE": [   36.6 ],
+"SPONSOR_AGE": [     37 ],
+"fillKey": [ "(36.1,37.9]" ] 
+},
+"WY": {
+ "STATE": [ "WY" ],
+"APPLICANT_AGE": [ 36.286 ],
+"SPONSOR_AGE": [ 35.524 ],
+"fillKey": [ "(24,36.1]" ] 
+} 
+},
+"id": "chart24781f4b640a" 
+}
+  chartParams.element = document.getElementById('chart24781f4b640a')
+ 
+  
+  var mapchart24781f4b640a = new Datamap(chartParams);
+  
+  
+    
+  // draw a bubble map if specified
+  if (chartParams.bubbles) {
+    var bubbles = chartParams.bubbles
+    mapchart24781f4b640a.bubbles(bubbles)
+  }
+  
+  if (chartParams.labels){
+    mapchart24781f4b640a.labels()
+  }
+  
+  if (chartParams.legend){
+    mapchart24781f4b640a.legend()
+  }
+  
+  setProjection = function( element, options ) {
+    var projection, path;
+ 
+      projection = d3.geo.albersUsa()
+        .scale(element.offsetWidth)
+        .translate([element.offsetWidth / 2, element.offsetHeight / 2]);
+ 
+    path = d3.geo.path()
+      .projection( projection );
+ 
+    return {path: path, projection: projection};
+  }
+</script>
+
+<style>
+.datamaps {
+  position: relative;
+}
+</style>
+    
+    <script></script>    
+  
+
+</body></html>
