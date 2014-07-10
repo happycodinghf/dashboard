@@ -1,3 +1,3 @@
 Ruby on Rails Dashboard Project
 =========
-[Stanley Zhang] (hpzhangyu@gmail.com)
+[Stanley Zhang] (mailto:hpzhangyu@gmail.com)
