@@ -1,5 +1,3 @@
-dashboard
+Ruby on Rails Dashboard Project
 =========
-[Yu Zhang]
-http://example.com
-~~Mistaken text.~~
+[Stanley Zhang] (hpzhangyu@gmail.com)
